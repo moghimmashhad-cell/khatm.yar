@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d6b57">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ختم‌یار">
+<link rel="icon" type="image/png" sizes="192x192" href="logo.png">
+<link rel="icon" type="image/png" sizes="512x512" href="logo.png">
+<link rel="apple-touch-icon" sizes="512x512" href="logo.png">
+<title>ختم‌یار | ختم قرآن خانوادگی</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+:root{--g:#0d6b57;--g2:#12866c;--ink:#16312b;--muted:#6c7d78;--bg:#f5f1e8;--card:#fffdf8;--line:#e5e1d7;--ok:#15956f;--danger:#b84a4a;--shadow:0 12px 35px #17372b14}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#f7f3ea,#eef5f0);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}.app{max-width:1050px;margin:auto;padding:18px 16px 35px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.brand{display:flex;align-items:center;gap:10px}.brand-mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,var(--g),#073f35);box-shadow:0 8px 20px #0d6b5730}.brand h1{font-size:21px;margin:0}.brand p{font-size:11px;color:var(--muted);margin:2px 0 0}.iconbtn{width:43px;height:43px;border-radius:14px;background:#ffffffaa;border:1px solid #fff;box-shadow:var(--shadow);color:var(--g);font-size:20px}
+.hero{border-radius:28px;padding:30px 25px;min-height:205px;background:linear-gradient(135deg,#0a594a,#12866c);color:white;box-shadow:0 18px 45px #0d6b5730;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:220px;height:220px;border:1px solid #ffffff20;border-radius:50%;left:-70px;bottom:-110px}.hero h2{font-size:28px;margin:0 0 10px}.hero p{max-width:680px;line-height:2;margin:0;color:#e6f5ef}.dots{display:flex;gap:6px;margin-top:22px}.dot{width:7px;height:7px;border-radius:20px;background:#ffffff55}.dot.active{width:23px;background:white}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin:27px 2px 12px}.section-head h3{margin:0;font-size:18px}.section-head span{color:var(--muted);font-size:12px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:13px}.card{background:#ffffffd9;border:1px solid #fff;border-radius:22px;padding:18px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}.k-title{font-weight:800;font-size:17px}.desc{font-size:13px;color:var(--muted);line-height:1.9;margin:7px 0}.meta{display:flex;gap:7px;flex-wrap:wrap}.pill{font-size:11px;background:#eef5f1;color:var(--g);padding:6px 9px;border-radius:10px}.progress{height:8px;background:#e7ece8;border-radius:20px;overflow:hidden;margin:13px 0 6px}.bar{height:100%;background:linear-gradient(90deg,var(--g2),#56b995);border-radius:20px}.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.btn{padding:10px 15px;border-radius:12px;background:var(--g);color:white;font-weight:600}.btn.secondary{background:#edf3ef;color:var(--g)}.btn.danger{background:#faeeee;color:var(--danger)}.empty{text-align:center;color:var(--muted);padding:30px}
+.install{margin-top:25px;width:100%;padding:14px;border-radius:17px;background:#173f36;color:#fff;font-weight:700}.foot{text-align:center;color:#8b9692;font-size:11px;margin-top:14px}
+.modal{position:fixed;inset:0;background:#102b2588;display:none;align-items:flex-end;justify-content:center;z-index:20;padding:12px}.modal.show{display:flex}.sheet{width:min(760px,100%);max-height:92vh;overflow:auto;background:#fffdf8;border-radius:27px 27px 18px 18px;padding:20px;box-shadow:0 25px 80px #0003}.sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.sheet h2{font-size:20px;margin:0}.close{background:#f1f1ec;border-radius:12px;width:38px;height:38px}.field{margin:10px 0}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}.field input,.field textarea,.field select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:13px;background:white;outline:0}.field textarea{min-height:80px;resize:vertical}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.admin-card h4{margin:0 0 12px}.list{display:flex;flex-direction:column;gap:8px}.list-item{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--line);border-radius:14px;padding:10px}.small{font-size:11px;color:var(--muted)}.person{display:grid;grid-template-columns:1fr 90px auto;gap:8px;align-items:center;margin-bottom:8px}.person select,.person input{width:100%;padding:9px;border:1px solid var(--line);border-radius:11px;background:white}.juzs{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.juz{width:82px;min-height:82px;border-radius:17px;border:1px solid var(--line);background:#f7f7f2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:var(--muted)}.juz strong{font-size:20px;color:var(--ink)}.juz.done{background:#e0f4eb;border-color:#a9dfca;color:var(--ok)}.juz.done strong{color:var(--ok)}.toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%) translateY(20px);background:#173f36;color:#fff;padding:11px 17px;border-radius:13px;opacity:0;pointer-events:none;transition:.25s;z-index:50;font-size:12px}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.loading{opacity:.6;pointer-events:none}
+@media(max-width:600px){.app{padding:12px}.hero{padding:24px 20px}.hero h2{font-size:23px}.cards{grid-template-columns:1fr}.person{grid-template-columns:1fr 80px auto}.sheet{padding:17px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+<div class="brand"><div class="brand-mark"></div><div><h1>ختم‌یار</h1><p>ختم قرآن خانوادگی</p></div></div>
+<button class="iconbtn" onclick="openAdmin()">☰</button>
+</header>
+
+<section class="hero" id="slider"><h2>ختم‌یار</h2><p>ختم‌های خانوادگی را ساده و منظم برگزار کنید و از وضعیت جزءهای خوانده‌شده باخبر باشید.</p><div class="dots" id="dots"></div></section>
+
+<div class="section-head"><h3>ختم‌های فعال</h3><span id="kCount">در حال دریافت...</span></div>
+<div class="cards" id="khatms"><div class="empty">در حال دریافت ختم‌ها...</div></div>
+
+<button class="install" id="installBtn">نصب برنامه</button>
+<div class="foot">ختم‌یار • برای استفاده خانوادگی</div>
+</div>
+
+<div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const SUPABASE_URL='https://ehsbbpelvxyyxkepsexm.supabase.co';
+const SUPABASE_KEY='sb_publishable_IgQqOsdpu1YVUUP115vekA_7osRzeqv';
+const API=SUPABASE_URL+'/rest/v1/';
+const headers={'apikey':SUPABASE_KEY,'Content-Type':'application/json','Prefer':'return=representation'};
+let slides=[], currentSlide=0, refreshTimer;
+
+async function api(path,options={}){
+  const res=await fetch(API+path,{...options,headers:{...headers,...(options.headers||{})}});
+  const text=await res.text();
+  let data; try{data=text?JSON.parse(text):null}catch{data=text}
+  if(!res.ok) throw new Error((data&&data.message)||data?.hint||'خطا در ارتباط با دیتابیس');
+  return data;
+}
+function esc(v=''){return String(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2400)}
+function openModal(html){document.getElementById('sheet').innerHTML=html;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
+
+async function loadHome(){
+ try{
+  slides=await api('slides?select=*&is_active=eq.true&order=sort_order.asc');
+  renderSlide(); 
+  const kh=await api('khatms?select=*&status=eq.active&order=end_at.asc');
+  const members=await api('khatm_members?select=id,khatm_id,family_member_id');
+  const ass=await api('assignments?select=khatm_id,status');
+  const box=document.getElementById('khatms');
+  document.getElementById('kCount').textContent=kh.length+' ختم';
+  if(!kh.length){box.innerHTML='<div class="empty">در حال حاضر ختم فعالی وجود ندارد.</div>';return}
+  box.innerHTML=kh.map(k=>{
+    const a=ass.filter(x=>x.khatm_id===k.id), done=a.filter(x=>x.status==='completed').length, pct=a.length?Math.round(done/a.length*100):0;
+    return `<div class="card"><div class="k-title">${esc(k.title)}</div><div class="desc">${esc(k.description||'بدون توضیح')}</div><div class="meta"><span class="pill">⏳ ${remaining(k.end_at)}</span><span class="pill">پیشرفت ${pct}%</span></div><div class="progress"><div class="bar" style="width:${pct}%"></div></div><div class="row"><span class="small">${done} از ${a.length} جزء خوانده شده</span><button class="btn" onclick="openKhatm('${k.id}')">مشاهده ختم</button></div></div>`;
+  }).join('');
+ }catch(e){document.getElementById('khatms').innerHTML='<div class="empty">خطا در دریافت اطلاعات. اتصال Supabase را بررسی کنید.</div>';console.error(e)}
+}
+function remaining(end){
+ if(!end)return 'بدون مهلت';
+ let ms=new Date(end)-Date.now(); if(ms<=0)return 'مهلت پایان یافته';
+ let d=Math.floor(ms/86400000);ms%=86400000;let h=Math.floor(ms/3600000);ms%=3600000;let m=Math.floor(ms/60000);
+ return `${d} روز ${h} ساعت`;
+}
+function renderSlide(){
+ const s=slides[currentSlide];
+ document.getElementById('slider').querySelector('h2').textContent=s?.title||'ختم‌یار';
+ document.getElementById('slider').querySelector('p').textContent=s?.subtitle||'ختم‌های خانوادگی را ساده و منظم برگزار کنید.';
+ document.getElementById('dots').innerHTML=slides.length?slides.map((_,i)=>`<i class="dot ${i===currentSlide?'active':''}"></i>`).join(''):'<i class="dot active"></i>';
+}
+setInterval(()=>{if(slides.length){currentSlide=(currentSlide+1)%slides.length;renderSlide()}},5000);
+setInterval(loadHome,60000);
+
+async function openKhatm(id){
+ try{
+  const [k,mem,ass,fam]=await Promise.all([
+   api(`khatms?id=eq.${id}&select=*`),api(`khatm_members?khatm_id=eq.${id}&select=*`),
+   api(`assignments?khatm_id=eq.${id}&select=*`),api('family_members?select=*')
+  ]);
+  const item=k[0], names=Object.fromEntries(fam.map(x=>[x.id,x.full_name]));
+  const grouped={}; mem.forEach(m=>grouped[m.id]=[]); ass.forEach(a=>{if(grouped[a.khatm_member_id])grouped[a.khatm_member_id].push(a)});
+  const done=ass.filter(a=>a.status==='completed').length,pct=ass.length?Math.round(done/ass.length*100):0;
+  openModal(`<div class="sheet-head"><div><h2>${esc(item.title)}</h2><div class="small">${remaining(item.end_at)}</div></div><button class="close" onclick="closeModal()">×</button></div>
+  <div class="desc">${esc(item.description||'بدون توضیح')}</div><div class="meta"><span class="pill">مهلت: ${item.end_at?new Date(item.end_at).toLocaleString('fa-IR'): 'تعیین نشده'}</span><span class="pill">پیشرفت ${pct}%</span></div>
+  <div class="progress"><div class="bar" style="width:${pct}%"></div></div>
+  <div class="section-head"><h3>اعضای این ختم</h3><span>${mem.length} نفر</span></div>
+  ${mem.length?mem.map(m=>`<div class="card" style="margin-bottom:9px;padding:14px"><div class="k-title">${esc(names[m.family_member_id]||'عضو حذف‌شده')}</div><div class="juzs">${(grouped[m.id]||[]).map(a=>`<button class="juz ${a.status==='completed'?'done':''}" onclick="toggleAssignment('${a.id}','${id}')"><strong>${a.juz_number}</strong><span>${a.status==='completed'?'✓ خوانده شده':'خوانده نشده'}</span></button>`).join('')||'<span class="small">جزئی برای این عضو ثبت نشده است.</span>'}</div></div>`).join(''):'<div class="empty">عضوی برای این ختم ثبت نشده است.</div>'}`);
+ }catch(e){toast(e.message)}
+}
+async function toggleAssignment(aid,kid){
+ try{const old=await api(`assignments?id=eq.${aid}&select=status`);const status=old[0]?.status==='completed'?'pending':'completed';await api(`assignments?id=eq.${aid}`,{method:'PATCH',body:JSON.stringify({status})});toast(status==='completed'?'جزء خوانده شد ✓':'به خوانده نشده برگشت');openKhatm(kid);loadHome()}catch(e){toast('تغییر وضعیت انجام نشد')}
+}
+
+function openAdmin(){
+ openModal(`<div class="sheet-head"><h2>پنل مدیریت</h2><button class="close" onclick="closeModal()">×</button></div>
+ <div class="field"><label>رمز مدیریت</label><input id="adminPass" type="password" inputmode="numeric" placeholder="رمز را وارد کنید"></div><button class="btn" onclick="checkAdmin()">ورود به مدیریت</button>`);
+}
+function checkAdmin(){
+ if(document.getElementById('adminPass').value==='8088') adminPanel(); else toast('رمز اشتباه است');
+}
+async function adminPanel(){
+ openModal(`<div class="sheet-head"><h2>مدیریت ختم‌یار</h2><button class="close" onclick="closeModal()">×</button></div>
+ <div class="admin-grid">
+ <div class="card admin-card"><h4>اعضای خانواده</h4><button class="btn" onclick="manageMembers()">مدیریت اعضا</button></div>
+ <div class="card admin-card"><h4>ختم‌ها</h4><button class="btn" onclick="manageKhatms()">مدیریت ختم‌ها</button></div>
+ <div class="card admin-card"><h4>اسلایدر</h4><button class="btn" onclick="manageSlides()">مدیریت اسلایدها</button></div>
+ </div>`);
+}
+async function manageMembers(){
+ try{const m=await api('family_members?select=*&order=full_name.asc');openModal(`<div class="sheet-head"><h2>اعضای خانواده</h2><button class="close" onclick="adminPanel()">×</button></div><button class="btn" onclick="addMemberForm()">+ افزودن عضو</button><div class="list" style="margin-top:14px">${m.map(x=>`<div class="list-item"><div><b>${esc(x.full_name)}</b><div class="small">${esc(x.phone||'')}</div></div><div class="actions"><button class="btn secondary" onclick="editMember('${x.id}')">ویرایش</button><button class="btn danger" onclick="deleteMember('${x.id}')">حذف</button></div></div>`).join('')||'<div class="empty">عضوی ثبت نشده.</div>'}</div>`)}catch(e){toast(e.message)}
+}
+function addMemberForm(){openModal(`<div class="sheet-head"><h2>افزودن عضو</h2><button class="close" onclick="manageMembers()">×</button></div><div class="field"><label>نام</label><input id="mn"></div><div class="field"><label>شماره تلفن (اختیاری)</label><input id="mp"></div><button class="btn" onclick="saveMember()">ذخیره</button>`)}
+async function saveMember(id=null){try{const body={full_name:document.getElementById('mn').value.trim(),phone:document.getElementById('mp').value.trim()||null};if(!body.full_name)return toast('نام را وارد کنید');await api(id?`family_members?id=eq.${id}`:'family_members',{method:id?'PATCH':'POST',body:JSON.stringify(body)});toast('ذخیره شد ✓');manageMembers()}catch(e){toast('افزودن عضو انجام نشد')}}
+async function editMember(id){const x=(await api(`family_members?id=eq.${id}&select=*`))[0];openModal(`<div class="sheet-head"><h2>ویرایش عضو</h2><button class="close" onclick="manageMembers()">×</button></div><div class="field"><label>نام</label><input id="mn" value="${esc(x.full_name)}"></div><div class="field"><label>شماره تلفن</label><input id="mp" value="${esc(x.phone||'')}"></div><button class="btn" onclick="saveMember('${id}')">ذخیره</button>`)}
+async function deleteMember(id){if(!confirm('عضو حذف شود؟'))return;try{await api(`family_members?id=eq.${id}`,{method:'DELETE'});toast('حذف شد');manageMembers()}catch(e){toast('حذف انجام نشد')}}
+
+async function manageKhatms(){
+ try{const k=await api('khatms?select=*&order=created_at.desc');openModal(`<div class="sheet-head"><h2>ختم‌ها</h2><button class="close" onclick="adminPanel()">×</button></div><button class="btn" onclick="addKhatmForm()">+ ایجاد ختم</button><div class="list" style="margin-top:14px">${k.map(x=>`<div class="list-item"><div><b>${esc(x.title)}</b><div class="small">${x.end_at?new Date(x.end_at).toLocaleString('fa-IR'):'بدون مهلت'}</div></div><div class="actions"><button class="btn secondary" onclick="editKhatm('${x.id}')">مدیریت</button><button class="btn danger" onclick="deleteKhatm('${x.id}')">حذف</button></div></div>`).join('')||'<div class="empty">ختمی ثبت نشده.</div>'}</div>`)}catch(e){toast(e.message)}
+}
+function addKhatmForm(){openModal(`<div class="sheet-head"><h2>ایجاد ختم</h2><button class="close" onclick="manageKhatms()">×</button></div><div class="field"><label>عنوان ختم</label><input id="kt"></div><div class="field"><label>توضیح ختم</label><textarea id="kd"></textarea></div><div class="field"><label>تاریخ و ساعت پایان</label><input id="ke" type="datetime-local"></div><button class="btn" onclick="saveKhatm()">ایجاد ختم</button>`)}
+async function saveKhatm(){try{const title=document.getElementById('kt').value.trim();if(!title)return toast('عنوان را وارد کنید');const end=document.getElementById('ke').value;await api('khatms',{method:'POST',body:JSON.stringify({title,description:document.getElementById('kd').value.trim()||null,end_at:end?new Date(end).toISOString():null,status:'active'})});toast('ختم ایجاد شد ✓');manageKhatms();loadHome()}catch(e){console.error(e);toast('ایجاد ختم انجام نشد')}}
+async function deleteKhatm(id){if(!confirm('این ختم و اطلاعات مربوط به آن حذف شود؟'))return;try{await api(`khatms?id=eq.${id}`,{method:'DELETE'});toast('ختم حذف شد');manageKhatms();loadHome()}catch(e){toast('حذف انجام نشد')}}
+async function editKhatm(id){
+ try{
+ const k=(await api(`khatms?id=eq.${id}&select=*`))[0], fam=await api('family_members?select=*&is_active=eq.true&order=full_name.asc'), mem=await api(`khatm_members?khatm_id=eq.${id}&select=*`), ass=await api(`assignments?khatm_id=eq.${id}&select=*`);
+ const by=Object.fromEntries(mem.map(m=>[m.family_member_id,m]));
+ openModal(`<div class="sheet-head"><h2>اعضای «${esc(k.title)}»</h2><button class="close" onclick="manageKhatms()">×</button></div>
+ <div class="field"><label>عنوان</label><input id="et" value="${esc(k.title)}"></div><div class="field"><label>توضیح</label><textarea id="ed">${esc(k.description||'')}</textarea></div><div class="field"><label>مهلت پایان</label><input id="ee" type="datetime-local" value="${k.end_at?new Date(new Date(k.end_at).getTime()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,16):''}"></div><button class="btn secondary" onclick="saveKhatmEdit('${id}')">ذخیره مشخصات ختم</button>
+ <div class="section-head"><h3>افزودن افراد و جزءها</h3></div><div id="people">${fam.map(f=>{let m=by[f.id];let juz=m?ass.filter(a=>a.khatm_member_id===m.id).map(a=>a.juz_number).join(',') :'';return `<div class="person"><select data-f="${f.id}" class="fsel"><option value="">${esc(f.full_name)}</option><option value="${f.id}" selected>${esc(f.full_name)}</option></select><input data-f="${f.id}" class="jinput" placeholder="جزء، مثال: ۱،۷،۱۵" value="${esc(juz)}"><button class="btn ${m?'danger':''}" onclick="setKMember('${id}','${f.id}',this)">${m?'حذف از ختم':'افزودن'}</button></div>`}).join('')}</div>`);
+ }catch(e){toast(e.message)}
+}
+async function saveKhatmEdit(id){try{const end=document.getElementById('ee').value;await api(`khatms?id=eq.${id}`,{method:'PATCH',body:JSON.stringify({title:document.getElementById('et').value.trim(),description:document.getElementById('ed').value.trim()||null,end_at:end?new Date(end).toISOString():null})});toast('ذخیره شد ✓');manageKhatms();loadHome()}catch(e){toast('ذخیره انجام نشد')}}
+async function setKMember(kid,fid,btn){
+ try{
+  const existing=await api(`khatm_members?khatm_id=eq.${kid}&family_member_id=eq.${fid}&select=*`);
+  if(existing.length){await api(`khatm_members?id=eq.${existing[0].id}`,{method:'DELETE'});toast('عضو از این ختم حذف شد');editKhatm(kid);return}
+  const row=(await api('khatm_members',{method:'POST',body:JSON.stringify({khatm_id:kid,family_member_id:fid})}))[0];
+  const input=document.querySelector(`.jinput[data-f="${fid}"]`), nums=(input?.value||'').split(/[,،\s]+/).map(Number).filter(n=>n>=1&&n<=30);
+  for(const n of nums) await api('assignments',{method:'POST',body:JSON.stringify({khatm_id:kid,khatm_member_id:row.id,juz_number:n,status:'pending'})});
+  toast('عضو و جزءها اضافه شدند ✓');editKhatm(kid)
+ }catch(e){console.error(e);toast('افزودن عضو به ختم انجام نشد')}
+}
+
+async function manageSlides(){
+ try{const s=await api('slides?select=*&order=sort_order.asc');openModal(`<div class="sheet-head"><h2>اسلایدر</h2><button class="close" onclick="adminPanel()">×</button></div><button class="btn" onclick="addSlideForm()">+ افزودن اسلاید</button><div class="list" style="margin-top:14px">${s.map(x=>`<div class="list-item"><div><b>${esc(x.title)}</b><div class="small">${esc(x.subtitle||'')}</div></div><div class="actions"><button class="btn secondary" onclick="editSlide('${x.id}')">ویرایش</button><button class="btn danger" onclick="deleteSlide('${x.id}')">حذف</button></div></div>`).join('')||'<div class="empty">اسلایدی ثبت نشده.</div>'}</div>`)}catch(e){toast(e.message)}
+}
+function addSlideForm(){openModal(`<div class="sheet-head"><h2>افزودن اسلاید</h2><button class="close" onclick="manageSlides()">×</button></div><div class="field"><label>عنوان</label><input id="st"></div><div class="field"><label>متن</label><textarea id="ss"></textarea></div><button class="btn" onclick="saveSlide()">ذخیره</button>`)}
+async function saveSlide(id=null){try{const s=await api('slides?select=sort_order&order=sort_order.desc&limit=1');const body={title:document.getElementById('st').value.trim(),subtitle:document.getElementById('ss').value.trim()||null};if(!body.title)return toast('عنوان را وارد کنید');if(id){await api(`slides?id=eq.${id}`,{method:'PATCH',body:JSON.stringify(body)})}else{body.sort_order=(s[0]?.sort_order||0)+1;await api('slides',{method:'POST',body:JSON.stringify(body)})}toast('ذخیره شد ✓');manageSlides();loadHome()}catch(e){console.error(e);toast('ذخیره اسلاید انجام نشد')}}
+async function editSlide(id){const x=(await api(`slides?id=eq.${id}&select=*`))[0];openModal(`<div class="sheet-head"><h2>ویرایش اسلاید</h2><button class="close" onclick="manageSlides()">×</button></div><div class="field"><label>عنوان</label><input id="st" value="${esc(x.title)}"></div><div class="field"><label>متن</label><textarea id="ss">${esc(x.subtitle||'')}</textarea></div><button class="btn" onclick="saveSlide('${id}')">ذخیره</button>`)}
+async function deleteSlide(id){if(!confirm('اسلاید حذف شود؟'))return;try{await api(`slides?id=eq.${id}`,{method:'DELETE'});toast('حذف شد');manageSlides();loadHome()}catch(e){toast('حذف انجام نشد')}}
+
+document.getElementById('installBtn').addEventListener('click',async()=>{
+ if(window.matchMedia('(display-mode: standalone)').matches){toast('برنامه از قبل نصب شده است');return}
+ if(window.deferredPrompt){window.deferredPrompt.prompt();await window.deferredPrompt.userChoice;window.deferredPrompt=null}
+ else toast('اگر مرورگر گزینه نصب را ارائه دهد، از منوی مرورگر آن را انتخاب کنید.');
+});
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window.deferredPrompt=e});
+loadHome();
+</script>
+</body>
+</html>
